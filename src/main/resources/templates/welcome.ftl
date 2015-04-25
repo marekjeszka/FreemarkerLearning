@@ -9,9 +9,12 @@ Time: ${time?time}
 <br>
 Message: ${message}
 <br><br>
-<#list list as x>
-  ${x_index + 1}. ${x}<#if x_has_next>,</#if>
-</#list>
+<table border=1>
+    <tr><th>Item
+    <#list list as x>
+        <tr><td>${x}
+    </#list>
+</table>
 </body>
 
 </html>

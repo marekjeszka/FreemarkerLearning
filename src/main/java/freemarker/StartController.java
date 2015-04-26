@@ -20,7 +20,6 @@ public class StartController {
                 new User("トム", "クルーズ"),
                 new User("ジョージ", "クルーニー"));
         model.put("list", users);
-        users.stream().forEach(p -> System.out.println(p));
         return "welcome";
     }
 }

@@ -2,19 +2,27 @@
 
 <html lang="en">
 
+<head>
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+</head>
+
 <body>
-Date: ${time?date}
-<br>
-Time: ${time?time}
-<br>
-Message: ${message}
-<br><br>
-<table border=1>
-    <tr><th>Item
-    <#list list as x>
-        <tr><td>${x}
-    </#list>
-</table>
+<div class="container">
+    Date: ${time?date}
+    <br>
+    Time: ${time?time}
+    <br>
+    Message: ${message}
+    <br><br>
+    <div id="table" class="table-editable">
+        <table class="table">
+            <tr><th>First Name</th><th>Last Name</th></tr>
+            <#list list as user>
+                <tr><td>${user.firstName}</td><td>${user.lastName}</td></tr>
+            </#list>
+        </table>
+    </div>
+</div>
 </body>
 
 </html>
